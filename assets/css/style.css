@@ -1,19 +1,22 @@
 body {
-    background-image: "assets/images/WarsBG.jpg";
+    background-image: url("../images/WarsBG.jpg");
+    color: red;
 }
 
-img{
-	position: relative;
-
-	width: 50%;
-}
 h1 {
 	font-size: 46px;
 }
-h2 {
+/*h2 {
 	position: absolute;
 	top:50px;
 	text-align: center;
 	width:100%;
+}*/
+.Player {
+	position: relative;
+	border-style: solid;
+	border-width: 2px;
+	border-color: red;
+	background-color: white;
 }
 

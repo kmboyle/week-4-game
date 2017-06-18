@@ -7,61 +7,75 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 </head>
 <body>
 <div class= "container-fluid">
 <div class = "row">
-	<h1>Choose Your Player</h1>
+	<h1 class = "text-left">Choose Your Player</h1>
 
 </div>
 
-<div class = "row">
+<div class = "row  text-center">
 	<div class = "col-md-3">
 	 <div class = "Player Darth">
-		<img src="assets/images/Darth_Vader1.jpg" alt="Darth"/>
-		<h2 class = "Points">#</h2>
+	  <h4>Darth Vader</h4>
+		<img class= "img-responsive center-block" src="assets/images/Darth_Vader1.jpg" alt="Darth"/>
+		<h4 class = "DarthHP text-centered">#</h4>
 		</div>
 
 		</div>
 	<div class = "col-md-3">
 	  <div class = "Player Han">
-		<img src="assets/images/han solo1.jpg" alt="Han"/>
-		<h2 class = "Points">#</h2>
+	   <h4>Han Solo</h4>
+		<img class= "img-responsive center-block" src="assets/images/han solo1.jpg" alt="Han"/>
+		<h4 class = "HanHP">#</h4>
 		</div>
 		</div>
 	<div class = "col-md-3">
 	 <div class = " Player Luke">
-		<img src="assets/images/luke skywalker1.jpg" alt="Luke"/>
-		<h2 class = "Points">#</h2>
+	 <h4>Luke Skywalker</h4>
+		<img class= "img-responsive center-block" src="assets/images/luke skywalker1.jpg" alt="Luke"/>
+		<h4 class = "LukeHP">#</h4>
 		</div>
 		</div>
 	<div class = "col-md-3">
 	 <div class = "Player Kylo">
-		<img src="assets/images/Kylo Ren1.jpg" alt="Kylo"/>
-		<h2 class = "Points">#</h2>
+	  <h4>Kylo Ren</h4>
+		<img class= "img-responsive center-block" src="assets/images/Kylo Ren1.jpg" alt="Kylo"/>
+		<h4 class = "KyloHP">#</h4>
 		</div>
 		</div>
 
 </div>
 
-<div class = "row">
+<div class = "row text-center">
 <div class = "col-md-3">
+ <h4>Your Player</h4>
 	<div class = "Player Attacker">
-		<img src="assets/images/Kylo Ren1.jpg" alt="Kylo"/>
-		<h2 class = "Points">#</h2>
+		<img class= "img-responsive center-block" src="" alt="attacker"/>
+		<h4 class = "Health"></h4>
 	</div>
 </div>
 </div>
 
-<div class = "row">
-<button>ATTACK!</button>
+<div class = "row text-center">
+<div class ="col-md-3">
+<button class="Attack">ATTACK!</button>
 </div>
-<div class = "row">
-	<div class = "Player Defender">
+</div>
+<div class = "row text-center">
+<div class = "col-md-3">
+ <h4>Enemy</h4>
+	<div class = "Player Defender" >
+	<img class= "img-responsive center-block" src="" alt="defender"/>
+		<h4 class = "Health"></h4>
 	</div>
 
 </div>
-	
+<div class = "col-md-3">
+ <h1 class = "text-left">Choose Your Player</h1>
+</div>	
 </div>
 
 <script type="text/javascript" src="assets/javascript/game.js"></script>
