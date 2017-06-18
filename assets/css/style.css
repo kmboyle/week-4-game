@@ -1,0 +1,19 @@
+body {
+    background-image: "assets/images/WarsBG.jpg";
+}
+
+img{
+	position: relative;
+
+	width: 50%;
+}
+h1 {
+	font-size: 46px;
+}
+h2 {
+	position: absolute;
+	top:50px;
+	text-align: center;
+	width:100%;
+}
+
