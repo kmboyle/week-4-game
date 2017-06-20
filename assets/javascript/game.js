@@ -19,8 +19,8 @@ var player = {
 //create each player
 var playerD = {"name": "Darth", 
 				"health": 140, 
-				"attack": 24, 
-				"counter": 18, 
+				"attack": 6, 
+				"counter": 8, 
 				attackPWUP(){
 				return this.attack += this.attack;
 	            },
@@ -29,8 +29,8 @@ var playerD = {"name": "Darth",
 				"playerLock":false };
 var playerH = {"name": "Han Solo", 
 				"health": 115, 
-				"attack": 18, 
-				"counter": 24, 
+				"attack": 4, 
+				"counter": 10, 
 				attackPWUP(){
 				return this.attack += this.attack;
 	            },
@@ -39,8 +39,8 @@ var playerH = {"name": "Han Solo",
 				"playerLock":false };
 var playerL = {"name": "Luke Skywalker", 
 				"health": 130, 
-				"attack": 24, 
-				"counter": 24, 
+				"attack": 8, 
+				"counter": 6, 
 				attackPWUP(){
 				return this.attack += this.attack;
 	            },
@@ -49,8 +49,8 @@ var playerL = {"name": "Luke Skywalker",
 				"playerLock":false };
 var playerK = {"name": "Kylo Ren", 
 				"health": 110, 
-				"attack": 30, 
-				"counter": 18, 
+				"attack": 4, 
+				"counter": 10, 
 				attackPWUP(){
 				return this.attack += this.attack;
 	            },
@@ -154,15 +154,34 @@ $(".Player").on("click", function() {
 	}
 	
 	
+
+
 });// end of your player select
+$(".Attack").on("click", function() {
+
+	if (play.health <= 0) {
+		$("h1").replaceWith($("<h1 style=color:blue;><strong>You Lost!</strong></h1>"));
+	}
+
+
+	if(enemy.health <= 0) {
+		$("h1").replaceWith($("<h1 style=color:#26FF18;><strong>You Won! Select Another Enemy</strong></h1>"));
+	}
+	else {
+		console.log(play.attack);
+
+		enemy.health  -= play.attack; 
+		play.health -= enemy.counter;
+		$(".Attacker .HP").html(play.health);
+		$(".Defender .HP").html(enemy.health);
+		play.attack = play.attackPWUP();	
+	}
+
+
+});//end of attack event click
 
 
 
-
-
-
-	// $(".Attack").on("click", function() {
-	// console.log("hi");	
 	//  if ($(".Attacker").hasClass("Darth") && player.health[0] > 0 && player.isPlayer) {
 	// 	if ($(".Defender").hasClass("Han") && player.playerLock) {
 				
