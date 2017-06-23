@@ -149,7 +149,7 @@ function checkHealth(){
 $(".Player").on("click", function() {
 
 	if (playerD.isPlayer || playerH.isPlayer || playerK.isPlayer || playerL.isPlayer) {
-
+              if(!$(this).hasClass("Attacker")){						
 		if ($(this).hasClass("Darth"))
 		{
 			$(this).addClass("Defender");
@@ -183,6 +183,7 @@ $(".Player").on("click", function() {
 			enemy = playerK;
 			}
 			console.log (enemy.name);
+	      }
 	}
 
 	if (!playerD.isPlayer && !playerH.isPlayer && !playerK.isPlayer && !playerL.isPlayer) {
