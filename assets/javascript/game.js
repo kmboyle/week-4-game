@@ -229,14 +229,17 @@ $(".Player").on("click", function() {
 $(".Attack").on("click", function() {
 
 		console.log(play.attack);
-		
+		if (enemy.playerLock){
 		enemy.health  -= play.attack; 
 		play.health -= enemy.counter;
 		$(".Attacker .HP").html(play.health);
 		$(".Defender .HP").html(enemy.health);
 		play.attack = play.attackPWUP();
 		checkHealth(); //call function checkHealth
-	    
+		} else {
+			$("h1").replaceWith($("<h1>First, Select Another Enemy</h1>"));
+			
+		} 		    
 
 });//end of attack event click
 
