@@ -113,24 +113,25 @@ var count = 3; //hold enemy count
 //$(".Health").html(player.name[0].health[0]);
 function restart(){
 	$(".restart").replaceWith($("<button>Restart</button>"));
+
 	
 }
 // console.log(player.attack[0]);
 function checkHealth(){
 
 		if (play.health <= 0) {
-		$("h1").replaceWith($("<h1 style=color:blue;><strong>You Lost!</strong></h1>"));
+		$(".prompt").replaceWith($("<h1 prompt style=color:blue;><strong>You Lost!</strong></h1>"));
 			restart();
 	}
 
 	if (enemy.health <= 0) {
 		count--;
-		$("h1").replaceWith($("<h1 style=color:#26FF18;><strong>You Won! Select Another Enemy</strong></h1>"));
+		$(".prompt").text("You Won! Select Another Enemy");
 		enemy.playerLock = false;
-		$(".Defender").replaceWith("<div class = pos2></div>");
+		$(".Defender").remove();
 		$(".Defender").hide();
 		if (count === 0){
-		   	$("h1").replaceWith($("<h1 style=color:#26FF18;><strong>CONGRATULATIONS, YOU BEAT THE GAME....credits: KB</strong></h1>"));
+		   	$(".prompt").replaceWith($("<h1 prompt style=color:#26FF18;><strong>CONGRATULATIONS, YOU BEAT THE GAME....credits: KB</strong></h1>"));
 		   	    restart();
 		   }
 		}
@@ -159,32 +160,32 @@ $(".Player").on("click", function() {
 		{
 			$(this).addClass("Defender");
 			playerD.playerLock = true;
-			$(".pos2").replaceWith(this);
-			$("h1").replaceWith($("<h1>Prepare For Battle</h1>"));
+			$(".pos2").html(this);
+			$(".prompt").text("Prepare For Battle");
 			enemy = playerD;
 		}
 		else if ($(this).hasClass("Han"))
 		{
 			playerH.playerLock = true;
-			$(".pos2").replaceWith(this);
+			$(".pos2").html(this);
 			$(this).addClass("Defender");
-			$("h1").replaceWith($("<h1>Prepare For Battle</h1>"));
+			$(".prompt").text("Prepare For Battle");
 			enemy = playerH;
 		}
 		else if ($(this).hasClass("Luke"))
 		{
 			playerL.playerLock = true;
-			$(".pos2").replaceWith(this);
+			$(".pos2").html(this);
 			$(this).addClass("Defender");
-			$("h1").replaceWith($("<h1>Prepare For Battle</h1>"));
+			$(".prompt").text("Prepare For Battle");
 			enemy = playerL;
 		}
 		else if ($(this).hasClass("Kylo"))
 		{
 			$(this).addClass("Defender");
 			playerK.playerLock = true;
-			$(".pos2").replaceWith(this);
-			$("h1").replaceWith($("<h1>Prepare For Battle</h1>"));
+			$(".pos2").html(this);
+			$(".prompt").text("Prepare For Battle");
 			enemy = playerK;
 			}
 			console.log (enemy.name);
@@ -198,32 +199,32 @@ $(".Player").on("click", function() {
 			$(this).addClass("Attacker");
 			playerD.isPlayer = true;
 			console.log(this);
-			$(".pos1").replaceWith(this);
-			$("h1").replaceWith($("<h1>Choose Your Enemy</h1>"));
+			$(".pos1").html(this);
+			$(".prompt").text("Choose Your Enemy");
 			play = playerD;
 		}
 		else if ($(this).hasClass("Han"))
 		{
 			$(this).addClass("Attacker");
 			playerH.isPlayer = true;
-			$(".pos1").replaceWith(this);
-			$("h1").replaceWith($("<h1>Choose Your Enemy</h1>"));
+			$(".pos1").html(this);
+			$(".prompt").text("Choose Your Enemy");
 			play = playerH;	
 		}
 		else if ($(this).hasClass("Luke"))
 		{
 			$(this).addClass("Attacker");
 			playerL.isPlayer = true;
-			$(".pos1").replaceWith(this);
-			$("h1").replaceWith($("<h1>Choose Your Enemy</h1>"));
+			$(".pos1").html(this);
+			$(".prompt").text("Choose Your Enemy");
 			play = playerL;
 		}
 		else if ($(this).hasClass("Kylo"))
 		{
 			$(this).addClass("Attacker");
 			playerK.isPlayer = true;
-			$(".pos1").replaceWith(this);
-			$("h1").replaceWith($("<h1>Choose Your Enemy</h1>"));
+			$(".pos1").html(this);
+			$(".prompt").text("Choose Your Enemy");
 			play = playerK;
 			
 		}
@@ -243,7 +244,7 @@ $(".Attack").on("click", function() {
 		play.attack = play.attackPWUP();
 		checkHealth(); //call function checkHealth
 		} else {
-			$("h1").replaceWith($("<h1>First, Select Another Enemy</h1>"));
+			$("prompt").text("First, Select Another Enemy");
 			
 		} 		    
 
