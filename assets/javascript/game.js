@@ -20,7 +20,7 @@ $(document).ready(function() {
 var playerD = {
 				name: "Darth", 
 				health: 140, 
-				attack: 6, 
+				attack: 12, 
 				counter: 14, 
 				attackPWUP: function(){
 				return this.attack += 6;
@@ -31,7 +31,7 @@ var playerD = {
 var playerH = {
 				name: "Han Solo", 
 				health: 115, 
-				attack: 4, 
+				attack: 6, 
 				counter: 10, 
 				attackPWUP: function(){
 				return this.attack += 4;
@@ -53,7 +53,7 @@ var playerL = {
 var playerK = {
 				name: "Kylo Ren", 
 				health: 110, 
-				attack: 4, 
+				attack: 10, 
 				counter: 12, 
 				attackPWUP:function(){
 				return this.attack += 4;
@@ -111,12 +111,16 @@ var count = 3; //hold enemy count
 // }
 
 //$(".Health").html(player.name[0].health[0]);
-
+function restart(){
+	$(".restart").replaceWith($("<button>Restart</button>"));
+	
+}
 // console.log(player.attack[0]);
 function checkHealth(){
 
 		if (play.health <= 0) {
 		$("h1").replaceWith($("<h1 style=color:blue;><strong>You Lost!</strong></h1>"));
+			restart();
 	}
 
 	if (enemy.health <= 0) {
@@ -127,6 +131,7 @@ function checkHealth(){
 		$(".Defender").hide();
 		if (count === 0){
 		   	$("h1").replaceWith($("<h1 style=color:#26FF18;><strong>CONGRATULATIONS, YOU BEAT THE GAME....credits: KB</strong></h1>"));
+		   	    restart();
 		   }
 		}
 	}
