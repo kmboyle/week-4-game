@@ -67,10 +67,10 @@ function restart(){
 	$(".Player").removeClass(".Attacker");
 	$(".Player").removeClass(".Defender");
 
-	$(".DarthOrig").html("<div class = 'Player Darth'><h4>Darth Vader</h4><img class= 'img-responsive center-block' src='assets/images/Darth_Vader1.jpg' alt='Darth'/><h4 class = 'DarthHP HP text-centered'>#</h4></div>");
-	$(".HanOrig").html("<div class = 'Player Han'><h4>Han Solo</h4><img class= 'img-responsive center-block' src='assets/images/han solo1.jpg' alt='Han'/><h4 class = 'HanHP HP text-centered'>#</h4></div>");
-	$(".LukeOrig").html("<div class = 'Player Luke'><h4>Luke Skywalker</h4><img class= 'img-responsive center-block' src='assets/images/luke skywalker1.jpg' alt='Luke'/><h4 class = 'LukeHP HP text-centered'>#</h4></div>");
-	$(".KyloOrig").html("<div class = 'Player Kylo'><h4>Kylo Ren</h4><img class= 'img-responsive center-block' src='assets/images/Kylo Ren1.jpg' alt='Kylo'/><h4 class = 'KyloHP HP text-centered'>#</h4></div>");
+	$(".DarthOrig").html("<div class = 'Player Darth'><h4>Darth Vader</h4><img class= 'img-responsive center-block img-thumbnail' src='assets/images/Darth_Vader1.jpg' alt='Darth'/><h4 class = 'DarthHP HP text-centered'>#</h4></div>");
+	$(".HanOrig").html("<div class = 'Player Han'><h4>Han Solo</h4><img class= 'img-responsive center-block img-thumbnail' src='assets/images/han solo1.jpg' alt='Han'/><h4 class = 'HanHP HP text-centered'>#</h4></div>");
+	$(".LukeOrig").html("<div class = 'Player Luke'><h4>Luke Skywalker</h4><img class= 'img-responsive center-block img-thumbnail' src='assets/images/luke skywalker1.jpg' alt='Luke'/><h4 class = 'LukeHP HP text-centered'>#</h4></div>");
+	$(".KyloOrig").html("<div class = 'Player Kylo'><h4>Kylo Ren</h4><img class= 'img-responsive center-block img-thumbnail' src='assets/images/Kylo Ren1.jpg' alt='Kylo'/><h4 class = 'KyloHP HP text-centered'>#</h4></div>");
 
 	$(".DarthHP").html(playerD.health);
 	$(".HanHP").html(playerH.health);
@@ -156,6 +156,7 @@ $(".Player").on("click", function() {
 			$(".pos2").html(this);
 			$(".prompt").text("Prepare For Battle");
 			enemy = playerD;
+			enemy.playerLock=true;
 		}
 		else if ($(this).hasClass("Han"))
 		{
@@ -164,6 +165,7 @@ $(".Player").on("click", function() {
 			$(this).addClass("Defender");
 			$(".prompt").text("Prepare For Battle");
 			enemy = playerH;
+			enemy.playerLock=true;
 		}
 		else if ($(this).hasClass("Luke"))
 		{
@@ -172,6 +174,7 @@ $(".Player").on("click", function() {
 			$(this).addClass("Defender");
 			$(".prompt").text("Prepare For Battle");
 			enemy = playerL;
+			enemy.playerLock=true;
 		}
 		else if ($(this).hasClass("Kylo"))
 		{
@@ -180,6 +183,7 @@ $(".Player").on("click", function() {
 			$(".pos2").html(this);
 			$(".prompt").text("Prepare For Battle");
 			enemy = playerK;
+			enemy.playerLock=true;
 			}
 			console.log (enemy.name);
 	      }

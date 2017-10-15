@@ -1,76 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Star Wars RPG</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Star Wars RPG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 </head>
+
 <body>
-<div class= "container-fluid">
-<div class = "row">
-<h1 class = "text-center" style="background-color: black">Star Wars RPG</h1>
-<h1 class = "text-left prompt">Choose Your Player</h1>
-</div>
+    <div class="container-fluid">
+        <div class="row">
+            <h1 class="text-center" style="background-color: black">Star Wars RPG</h1>
+            <h1 class="text-left prompt">Choose Your Player</h1>
+        </div>
 
-<div class = "row text-center">
-<div class = "col-xs-2 col-md-2">
- <h4>Your Player</h4>
-	<div class = "pos1">
-		
-	</div>
-	<button class="Attack">ATTACK!</button>
-<div class="restart"></div>
-</div>
-<!-- <div class = "row text-center"> -->
-<!-- <div class ="col-xs-2 col-md-2"> -->
-
-<!-- </div> -->
-<!-- <div class = "row text-center"> -->
-<div class = "col-xs-2 col-md-2">
- <h4>Enemy</h4>
-	<div class = "pos2"></div>
-</div>
+        <div class="row text-center">
+            <div class="col-container">
+                <div class="col-xs-2 col-md-2">
+                    <div class="col">
+                        <h4>Your Player</h4>
+                        <div class="pos1">
+                        </div>
 
 
-	<div class = "col-xs-2 col-md-2 DarthOrig">
-	 <div class = "Player Darth">
-	  <h4>Darth Vader</h4>
-		<img class= "img-responsive center-block" src="assets/images/Darth_Vader1.jpg" alt="Darth"/>
-		<h4 class = "DarthHP HP text-centered">#</h4>
-		</div>
+                    </div>
+                    <button class="Attack">ATTACK!</button>
+                    <div class="restart"></div>
+                </div>
+                <!-- <div class = "row text-center"> -->
+                <!-- <div class ="col-xs-2 col-md-2"> -->
 
-		</div>
-	<div class = "col-xs-2 col-md-2 HanOrig">
-	  <div class = "Player Han">
-	   <h4>Han Solo</h4>
-		<img class= "img-responsive center-block" src="assets/images/han solo1.jpg" alt="Han"/>
-		<h4 class = "HanHP HP">#</h4>
-		</div>
-		</div>
-	<div class = "col-xs-2 col-md-2 LukeOrig">
-	 <div class = " Player Luke">
-	 <h4>Luke Skywalker</h4>
-		<img class= "img-responsive center-block" src="assets/images/luke skywalker1.jpg" alt="Luke"/>
-		<h4 class = "LukeHP HP">#</h4>
-		</div>
-		</div>
-	<div class = "col-xs-2 col-md-2 KyloOrig">
-	 <div class = "Player Kylo">
-	  <h4>Kylo Ren</h4>
-		<img class= "img-responsive center-block" src="assets/images/Kylo Ren1.jpg" alt="Kylo"/>
-		<h4 class = "KyloHP HP">#</h4>
-		</div>
-		</div>
+                <!-- </div> -->
+                <!-- <div class = "row text-center"> -->
+                <div class="col col-xs-2 col-md-2">
+                    <h4>Enemy</h4>
+                    <div class="pos2"></div>
+                </div>
 
 
+                <div class="col-xs-2 col-md-2 DarthOrig">
+                    <div class="col">
+                        <div class="Player Darth">
+                            <h4>Darth Vader</h4>
+                            <img class="center-block" src="assets/images/Darth_Vader1.jpg" alt="Darth" />
+                            <h4 class="DarthHP HP text-centered">#</h4>
+                        </div>
+                    </div>
 
-<!-- </div> -->
 
-<!-- </div> -->
-<script type="text/javascript" src="assets/javascript/game.js"></script>
+                </div>
+                <div class="col-xs-2 col-md-2 HanOrig">
+                    <div class="col">
+                        <div class="Player Han">
+                            <h4>Han Solo</h4>
+                            <img src="assets/images/han solo1.jpg" class="center-block" alt="Han" />
+                            <h4 class="HanHP HP">#</h4>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-xs-2 col-md-2 LukeOrig">
+                    <div class=" Player Luke ">
+                        <h4>Luke Skywalker</h4>
+                        <img class="center-block" src="assets/images/luke skywalker1.jpg" alt="Luke" />
+                        <h4 class="LukeHP HP">#</h4>
+                    </div>
+                </div>
+                <div class="col-xs-2 col-md-2 KyloOrig">
+                    <div class="Player Kylo">
+                        <h4>Kylo Ren</h4>
+                        <img class="center-block" src="assets/images/Kylo Ren1.jpg" alt="Kylo" />
+                        <h4 class="KyloHP HP">#</h4>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- </div> -->
+
+            <!-- </div> -->
+            <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
+
 </html>
